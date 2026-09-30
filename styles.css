@@ -1,0 +1,521 @@
+/* ==========================================================================
+   CV COMPACTO - GERARDO ADRIÁN RODRÍGUEZ DOMÍNGUEZ
+   Estructura: 2 Columnas Alta Densidad / Estilo Shell Técnico
+   ========================================================================== */
+
+:root {
+  /* Dark Mode (Default) */
+  --bg-page: #090d16;
+  --bg-shell: #101622;
+  --bg-sidebar: #0d121c;
+  --bg-card: #151c2c;
+  --bg-card-hover: #1b2438;
+
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-card: rgba(255, 255, 255, 0.12);
+  --border-hover: rgba(56, 189, 248, 0.45);
+
+  --text-main: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+
+  --accent: #38bdf8;
+  --accent-soft: rgba(56, 189, 248, 0.12);
+  --accent-border: rgba(56, 189, 248, 0.28);
+
+  --green: #10b981;
+  --green-soft: rgba(16, 185, 129, 0.12);
+
+  --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "JetBrains Mono", Menlo, Consolas, monospace;
+
+  --shadow-shell: 0 16px 40px -8px rgba(0, 0, 0, 0.6);
+  --radius: 8px;
+}
+
+[data-theme="light"] {
+  --bg-page: #eef2f6;
+  --bg-shell: #ffffff;
+  --bg-sidebar: #f8fafc;
+  --bg-card: #f1f5f9;
+  --bg-card-hover: #e2e8f0;
+
+  --border-color: rgba(0, 0, 0, 0.08);
+  --border-card: rgba(0, 0, 0, 0.1);
+  --border-hover: rgba(2, 132, 199, 0.45);
+
+  --text-main: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+
+  --accent: #0284c7;
+  --accent-soft: rgba(2, 132, 199, 0.08);
+  --accent-border: rgba(2, 132, 199, 0.22);
+
+  --green: #059669;
+  --green-soft: rgba(5, 150, 105, 0.08);
+
+  --shadow-shell: 0 12px 30px -6px rgba(0, 0, 0, 0.1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  line-height: 1.45;
+  font-size: 14.5px;
+  padding: 20px 14px 40px;
+  min-height: 100vh;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------------
+   1. Toolbar Superior Compacta
+   -------------------------------------------------------------------------- */
+.toolbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.btn-tool {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  background: var(--bg-shell);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  color: var(--text-main);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: all 0.15s ease;
+}
+
+.btn-tool:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.btn-tool:active {
+  transform: translateY(0);
+}
+
+.btn-theme {
+  padding: 7px 10px;
+  font-size: 14px;
+}
+
+/* --------------------------------------------------------------------------
+   2. Shell del CV (2 Columnas)
+   -------------------------------------------------------------------------- */
+.cv-shell {
+  max-width: 980px;
+  margin: 0 auto;
+  background: var(--bg-shell);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: var(--shadow-shell);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 270px 1fr;
+}
+
+/* Barra Superior de Ventana */
+.window-bar {
+  grid-column: 1 / -1;
+  background: var(--bg-sidebar);
+  border-bottom: 1px solid var(--border-color);
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.window-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot-red { background: #ef4444; }
+.dot-yellow { background: #f59e0b; }
+.dot-green { background: #10b981; }
+
+.window-title {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+/* --------------------------------------------------------------------------
+   3. Sidebar Izquierda
+   -------------------------------------------------------------------------- */
+.sidebar {
+  background: var(--bg-sidebar);
+  border-right: 1px solid var(--border-color);
+  padding: 24px 20px;
+}
+
+.availability-wrapper {
+  margin-bottom: 20px;
+}
+
+.availability {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  background: var(--green-soft);
+  color: var(--green);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  border-radius: 999px;
+}
+
+.side-section {
+  margin-bottom: 22px;
+}
+
+.side-section h2 {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  font-weight: 700;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 4px;
+  margin-bottom: 10px;
+}
+
+.clean-list {
+  list-style: none;
+}
+
+.contact-list li {
+  padding: 5px 0;
+  border-bottom: 1px dashed var(--border-color);
+  font-size: 12.5px;
+}
+
+.contact-list span,
+.compact-list span {
+  display: block;
+  font-size: 10.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.compact-list li {
+  padding: 4px 0;
+  font-size: 12.5px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed var(--border-color);
+}
+
+/* Skill Meters */
+.skill-meter {
+  margin-bottom: 10px;
+}
+
+.skill-meter div {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11.5px;
+  margin-bottom: 3px;
+}
+
+.skill-meter strong {
+  color: var(--accent);
+}
+
+progress {
+  width: 100%;
+  height: 6px;
+  appearance: none;
+  border: none;
+  background: var(--border-color);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+progress::-webkit-progress-bar {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+progress::-webkit-progress-value {
+  background: var(--accent);
+  border-radius: 4px;
+}
+
+progress::-moz-progress-bar {
+  background: var(--accent);
+  border-radius: 4px;
+}
+
+/* Pill list de herramientas */
+.pill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  list-style: none;
+}
+
+.pill-list li {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 7px;
+  border-radius: 4px;
+  color: var(--text-secondary);
+}
+
+/* --------------------------------------------------------------------------
+   4. Contenido Principal
+   -------------------------------------------------------------------------- */
+.content {
+  padding: 26px 28px;
+}
+
+.hero {
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.role-badge {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+}
+
+.summary {
+  font-size: 13.5px;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin-bottom: 12px;
+}
+
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.hero-tags span {
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 3px 8px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  border: 1px solid var(--accent-border);
+  border-radius: 4px;
+}
+
+/* Secciones */
+.section {
+  margin-bottom: 20px;
+}
+
+.section h2 {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 4px;
+  margin-bottom: 12px;
+}
+
+/* Tarjetas */
+.entry-card,
+.project-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.entry-card:hover,
+.project-card:hover {
+  border-color: var(--border-hover);
+  background: var(--bg-card-hover);
+}
+
+.entry-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 2px;
+}
+
+.entry-head h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.entry-head span,
+.link-live {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.meta {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.project-desc {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+ul {
+  padding-left: 16px;
+}
+
+li {
+  font-size: 12.5px;
+  color: var(--text-secondary);
+  margin-bottom: 3px;
+  line-height: 1.45;
+}
+
+li::marker {
+  color: var(--accent);
+}
+
+/* Competencias */
+.competency-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.competency-grid span {
+  font-size: 11.5px;
+  font-weight: 500;
+  padding: 4px 8px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  color: var(--text-secondary);
+}
+
+/* --------------------------------------------------------------------------
+   5. Responsivo Móvil
+   -------------------------------------------------------------------------- */
+@media (max-width: 780px) {
+  .cv-shell {
+    grid-template-columns: 1fr;
+    border-radius: 8px;
+  }
+  .sidebar {
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+  .content {
+    padding: 20px 16px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   6. Impresión PDF / ATS Mode
+   -------------------------------------------------------------------------- */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #111827 !important;
+    padding: 0 !important;
+  }
+
+  .toolbar,
+  .window-bar {
+    display: none !important;
+  }
+
+  .cv-shell {
+    box-shadow: none !important;
+    border: none !important;
+    max-width: 100% !important;
+    background: #ffffff !important;
+    display: grid !important;
+    grid-template-columns: 240px 1fr !important;
+  }
+
+  .sidebar {
+    background: #f9fafb !important;
+    border-right: 1px solid #e5e7eb !important;
+  }
+
+  .entry-card,
+  .project-card {
+    background: #ffffff !important;
+    border: 1px solid #e5e7eb !important;
+    box-shadow: none !important;
+    page-break-inside: avoid;
+  }
+
+  a {
+    color: #111827 !important;
+    text-decoration: underline !important;
+  }
+
+  .entry-head span,
+  .role-badge,
+  .link-live,
+  .contact-list span {
+    color: #1f2937 !important;
+  }
+}

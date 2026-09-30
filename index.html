@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV - Gerardo Adrián Rodríguez Domínguez | Ingeniería en Software</title>
+  <meta name="description" content="CV profesional de Gerardo Adrián Rodríguez Domínguez. Estudiante de Ingeniería en Software en UABC, Backend LAMP, Linux y Google Cloud.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230ea5e9'/><text x='50%' y='54%' dominant-baseline='middle' text-anchor='middle' font-size='48' font-family='sans-serif' font-weight='800' fill='white'>GR</text></svg>">
+</head>
+<body>
+
+  <!-- Barra de Herramientas Compacta -->
+  <div class="toolbar">
+    <button type="button" class="btn-tool" onclick="window.print()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      <span>Guardar PDF</span>
+    </button>
+    <button type="button" class="btn-tool" id="btn-copy-email" data-email="gerardo.rodriguez36@uabc.edu.mx">
+      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+      <span id="copy-label">Copiar Correo</span>
+    </button>
+    <a href="https://github.com/Neraaaauu" target="_blank" rel="noopener noreferrer" class="btn-tool link-tool">
+      <span>GitHub ↗</span>
+    </a>
+    <button type="button" class="btn-tool btn-theme" id="theme-toggle" title="Cambiar tema">
+      <span class="theme-icon">◐</span>
+    </button>
+  </div>
+
+  <!-- Shell Compacto del CV (Estructura de 2 Columnas) -->
+  <article class="cv-shell">
+    
+    <!-- Barra Superior de Ventana -->
+    <div class="window-bar" aria-hidden="true">
+      <div class="window-dots">
+        <span class="dot dot-red"></span>
+        <span class="dot dot-yellow"></span>
+        <span class="dot dot-green"></span>
+      </div>
+      <span class="window-title">GERARDO_RODRIGUEZ_CV.PDF</span>
+    </div>
+
+    <!-- Columna Lateral Izquierda (270px) -->
+    <aside class="sidebar">
+      <div class="availability-wrapper">
+        <span class="availability">🟢 Disponible para proyectos</span>
+      </div>
+
+      <!-- Contacto -->
+      <section class="side-section">
+        <h2>Contacto</h2>
+        <ul class="clean-list contact-list">
+          <li><span>Teléfono</span><a href="tel:+526652600902">+52 665 260 0902</a></li>
+          <li><span>Email</span><a href="mailto:gerardo.rodriguez36@uabc.edu.mx">gerardo.rodriguez36@uabc.edu.mx</a></li>
+          <li><span>Ubicación</span>Tecate, Baja California, México</li>
+          <li><span>GitHub</span><a href="https://github.com/Neraaaauu" target="_blank" rel="noopener noreferrer">github.com/Neraaaauu</a></li>
+        </ul>
+      </section>
+
+      <!-- Habilidades -->
+      <section class="side-section">
+        <h2>Habilidades</h2>
+        <div class="skill-meter">
+          <div><span>Stack LAMP (PHP/Apache)</span><strong>85%</strong></div>
+          <progress value="85" max="100"></progress>
+        </div>
+        <div class="skill-meter">
+          <div><span>MariaDB / MySQL</span><strong>80%</strong></div>
+          <progress value="80" max="100"></progress>
+        </div>
+        <div class="skill-meter">
+          <div><span>JavaScript / HTML5 / CSS3</span><strong>85%</strong></div>
+          <progress value="85" max="100"></progress>
+        </div>
+        <div class="skill-meter">
+          <div><span>Linux &amp; Windows</span><strong>80%</strong></div>
+          <progress value="80" max="100"></progress>
+        </div>
+        <div class="skill-meter">
+          <div><span>Python &amp; REST APIs</span><strong>75%</strong></div>
+          <progress value="75" max="100"></progress>
+        </div>
+        <div class="skill-meter">
+          <div><span>Git / GitHub</span><strong>80%</strong></div>
+          <progress value="80" max="100"></progress>
+        </div>
+      </section>
+
+      <!-- Herramientas -->
+      <section class="side-section">
+        <h2>Herramientas</h2>
+        <ul class="pill-list">
+          <li>Stack LAMP</li>
+          <li>MariaDB</li>
+          <li>MySQL</li>
+          <li>Apache</li>
+          <li>WebAuthn</li>
+          <li>phpMyAdmin</li>
+          <li>Linux</li>
+          <li>Windows</li>
+          <li>Google Cloud</li>
+          <li>Google Colab</li>
+          <li>Git / GitHub</li>
+          <li>Trello</li>
+          <li>Scrum / Ágil</li>
+        </ul>
+      </section>
+
+      <!-- Idiomas -->
+      <section class="side-section">
+        <h2>Idiomas</h2>
+        <ul class="clean-list compact-list">
+          <li><span>Español</span>Nativo</li>
+          <li><span>Inglés</span>Intermedio / B2</li>
+        </ul>
+      </section>
+    </aside>
+
+    <!-- Columna Principal de Contenido -->
+    <main class="content">
+
+      <!-- Hero Compacto -->
+      <header class="hero">
+        <p class="role-badge">ESTUDIANTE DE INGENIERÍA EN SOFTWARE &bull; WEB &amp; BACKEND</p>
+        <h1>Gerardo Adrián Rodríguez Domínguez</h1>
+        <p class="summary">
+          Estudiante de Ingeniería en Software enfocado en desarrollo web práctico, backend e integración de sistemas. Experiencia con el stack LAMP, procesamiento de datos clínicos (ECG) e integración de autenticación biométrica con WebAuthn. Aprendizaje autodidacta, resolución técnica de problemas y flujos con IA.
+        </p>
+        <div class="hero-tags">
+          <span>Backend LAMP</span>
+          <span>WebAuthn FIDO2</span>
+          <span>Linux</span>
+          <span>Windows</span>
+          <span>APIs REST</span>
+          <span>Google Cloud</span>
+          <span>Metodologías Ágiles</span>
+        </div>
+      </header>
+
+      <!-- Formación Académica & Certificación -->
+      <section class="section">
+        <h2>Formación Académica &amp; Certificación</h2>
+        
+        <div class="entry-card">
+          <div class="entry-head">
+            <h3>Licenciatura en Ingeniería en Software</h3>
+            <span>6.º Semestre &bull; Grad: Dic 2027</span>
+          </div>
+          <p class="meta">Universidad Autónoma de Baja California (UABC) &bull; Valle de las Palmas, B.C.</p>
+          <ul>
+            <li>Formación en desarrollo web, estructuras de datos, bases de datos y gestión de proyectos bajo metodologías ágiles (Scrum).</li>
+          </ul>
+        </div>
+
+        <div class="entry-card cert-entry">
+          <div class="entry-head">
+            <h3>Preparing for Google Cloud Certification: Cloud Architect</h3>
+            <span>Certificado Coursera / GCP</span>
+          </div>
+          <p class="meta">
+            Google Cloud &bull; 7 Cursos Completados &bull; 
+            <a href="https://coursera.org/verify/professional-cert/VNBMZM3KI1QK" target="_blank" rel="noopener noreferrer">Validar ID: VNBMZM3KI1QK ↗</a> &bull; 
+            <a href="certificado-google-cloud.pdf" target="_blank">Ver PDF</a>
+          </p>
+          <ul>
+            <li>Diseño de infraestructura en Google Cloud Platform (GCP), redes, Kubernetes (GKE), escalabilidad y alta disponibilidad.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Proyectos Destacados -->
+      <section class="section">
+        <h2>Proyectos Destacados</h2>
+
+        <div class="project-card">
+          <div class="entry-head">
+            <h3>BioSignalLab (BioSigLab)</h3>
+            <a href="https://biosignal-lab.com.mx/" target="_blank" rel="noopener noreferrer" class="link-live">En vivo: biosignal-lab.com.mx ↗</a>
+          </div>
+          <p class="meta">PHP &bull; MariaDB/MySQL &bull; Apache (LAMP) &bull; JS &bull; WebAuthn &bull; SSL</p>
+          <p class="project-desc">Plataforma web para gestión, extracción y graficación interactiva de reportes clínicos y electrocardiogramas (12 derivaciones) procesados desde XML y hojas de cálculo.</p>
+          <ul>
+            <li>Inicio de sesión con WebAuthn para acceso biométrico (Face ID / huella dactilar).</li>
+            <li>Interfaces dinámicas para trazado de ritmo cardíaco y despliegue en Apache con SSL.</li>
+          </ul>
+        </div>
+
+        <div class="project-card">
+          <div class="entry-head">
+            <h3>GRAM (Gestión Experimental de Memoria)</h3>
+            <span>Linux &bull; Bash / C &bull; Kernel</span>
+          </div>
+          <p class="meta">Investigación y Modelado en el Kernel de Linux</p>
+          <p class="project-desc">Proyecto conceptual inspirado en ZRAM para analizar el intercambio de memoria (swap) en Linux.</p>
+          <ul>
+            <li>Esquema de segmentación Hot RAM / Cold RAM para priorizar procesos y reducir latencia en disco.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Experiencia y Servicio Social -->
+      <section class="section">
+        <h2>Experiencia y Servicio Social</h2>
+
+        <div class="entry-card">
+          <div class="entry-head">
+            <h3>Desarrollador de Software (Servicio Social)</h3>
+            <span>2026 &ndash; En curso</span>
+          </div>
+          <p class="meta">Universidad Autónoma de Baja California (UABC) &bull; Mexicali, B.C.</p>
+          <ul>
+            <li>Desarrollo de asistente virtual institucional para responder consultas sobre el catálogo bibliotecario.</li>
+            <li>Integración en tiempo real con la API REST del sistema Koha para verificar disponibilidad de acervo.</li>
+            <li>Pruebas con modelos de lenguaje compactos (SLMs) en Google Colab para automatización de respuestas.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Competencias -->
+      <section class="section">
+        <h2>Competencias</h2>
+        <div class="competency-grid">
+          <span>Metodologías Ágiles (Scrum / Kanban)</span>
+          <span>Gestión de Proyectos (Trello)</span>
+          <span>Aprendizaje autodidacta</span>
+          <span>Resolución de problemas</span>
+          <span>Flujos asistidos por IA</span>
+          <span>Stack LAMP &amp; Apache</span>
+          <span>Autenticación WebAuthn</span>
+          <span>Bases de datos SQL</span>
+          <span>Trabajo en equipo</span>
+        </div>
+      </section>
+
+    </main>
+  </article>
+
+  <script src="script.js"></script>
+</body>
+</html>
